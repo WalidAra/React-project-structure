@@ -96,4 +96,13 @@ type Fetch = {
 };
 ```
 you can replace this prop with all possible endpoints of better response
-for example 'login'|'register'|'posts/create' ... etc depends on the project your are working on
+for example : depends on the project your are working on
+
+```javascript
+type Fetch = {
+  endPoint: 'login'|'sign-up'|'posts/create' // depends on the project your are working on
+  method: string;
+  body?: any;
+  TokenInclude?: boolean;
+  token?: string;
+};
