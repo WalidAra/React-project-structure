@@ -80,8 +80,8 @@ npm install axios
 secondly you need to add your own TOKEN_HEADER in your .env file , if you are using NextJS you have to name your env variable to NEXT_PUBLIC_TOKEN_HEADER
 
 ```javascript
-const header = process.env.TOKEN_HEADER; // if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
-```
+// if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
+const header = process.env.TOKEN_HEADER; ```
 
 ##last part (optional) : 
 
