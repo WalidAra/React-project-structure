@@ -86,7 +86,6 @@ const header = process.env.TOKEN_HEADER; ```
 ##last part (optional) : 
 
 at Fetch type Props 
-```javascript
 type Fetch = {
   endPoint: string; // replace this one with all possible endpoints of better response
   method: string;
