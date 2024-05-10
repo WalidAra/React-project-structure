@@ -40,19 +40,18 @@ src
 +-- utils           
 ```
 
-##Explain
+- **components**: Shared components that grace the entire kingdom
+- **config**: The vault of global configurations, env variables, and secrets
+- **features**: Feature based modules
+- **hooks**: Mystical hooks, shared across the entire realm
+- **libs**: Re-exporting different libraries preconfigured for the application
+- **providers**: Keepers of the application’s life force, the providers
+- **routes**: Routes configuration
+- **stores**: Global state stores
+- **test**: The arena of trials, where utilities and mock servers prove their mettle
+- **types**: Base types used across the application
+- **utils**: Shared utility functions
 
-**components**: Shared components that grace the entire kingdom
-**config**: The vault of global configurations, env variables, and secrets
-**features**: Feature based modules
-**hooks**: Mystical hooks, shared across the entire realm
-**libs**: re-exporting different libraries preconfigured for the application
-**providers**: Keepers of the application’s life force, the providers
-**routes**: routes configuration
-**stores**: global state stores
-**test**: The arena of trials, where utilities and mock servers prove their mettle
-**types**: base types used across the application
-**utils**: shared utility functions
 
 ## Index File
 The index file
