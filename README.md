@@ -82,9 +82,9 @@ secondly you need to add your own TOKEN_HEADER in your .env file , if you are us
 ```javascript
 // if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
 const header = process.env.TOKEN_HEADER; ```
-
+```
 ##last part (optional) : 
-
+```javascript
 at Fetch type Props 
 type Fetch = {
   endPoint: string; // replace this one with all possible endpoints of better response
