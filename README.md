@@ -67,6 +67,8 @@ import {AwesomeComponent} from "@/features/awesome-feature"
 
 import {AwesomeComponent} from "@/features/awesome-feature/components/AwesomeComponent
 ```
+## useFetch hook
+
 I included the useFetch hook file as i find it more useful creating such hook
 
 you ll find several errors to fix them :
