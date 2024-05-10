@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios"; // Install axios package by following this command npm install axios
 
 type Fetch = {
-  endPoint: string; // replace this one with all possible endpoints of better response
+  endPoint: string; // replace this one with all possible endpoints for better response
   method: string;
   body?: any;
   TokenInclude?: boolean;
