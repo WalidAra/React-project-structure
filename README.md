@@ -77,7 +77,7 @@ you need to install axios package if you prefer using axios to fetch data , you 
 npm install axios
 ```
 
-secondly you need to add your own TOKEN_HEADER in your .env file , if you are using NextJS you have to name your env variable to NEXT_PUBLIC_TOKEN_HEADER
+secondly you need to add your own ```TOKEN_HEADER``` in your .env file , if you are using NextJS you have to name your env variable to ```NEXT_PUBLIC_TOKEN_HEADER```
 
 ```javascript
 // if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
