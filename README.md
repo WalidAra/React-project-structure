@@ -1,4 +1,4 @@
-# Creating a Robust React App Structure
+# Creating a React App Structure
 
 ## Introduction
 Ever dreamt of a React app that chuckles at bugs and scoffs at spaghetti code? Let’s embark on a journey to create a React app so robust it could survive an apocalypse of bad coding practices.
