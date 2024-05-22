@@ -1,39 +1,43 @@
-import axios, { AxiosRequestConfig } from "axios"; // Install axios package by following this command npm install axios
+import axios, { AxiosRequestConfig } from "axios";
 
-type Fetch = {
-  endPoint: string; // replace this one with all possible endpoints for better response
-  method: string;
-  body?: any;
-  TokenInclude?: boolean;
-  token?: string;
-};
-
-export const useFetch = ({
-  endPoint,
+export const useFetch = async ({
+  endPoint = "/",
   method,
-  TokenInclude,
+  TokenInclude = false,
   body,
   token,
 }: Fetch) => {
-  try {
-    const header = process.env.TOKEN_HEADER; // if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
-    const fetchData = async () => {
-      const axiosConfig: AxiosRequestConfig = {
-        method: method.toUpperCase(),
-        url: endPoint,
-        headers: {
-          "Content-Type": "application/json",
-          ...(TokenInclude && { [header]: token }),
-        },
-        data: body,
-      };
 
-      const response = await axios(axiosConfig);
-      return response.data;
+  const header = process.env.NEXT_PUBLIC_TOKEN_HEADER as string; // set your own header
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL as string;  // set your own base url (backend server url)
+
+  try {
+    const axiosConfig: AxiosRequestConfig = {
+      method: method.toUpperCase(),
+      url: BASE_URL + (TokenInclude ? "/private" : "/public") + endPoint, // you might want to remove modify this part url config
+      headers: {
+        "Content-Type": "application/json",
+        ...(TokenInclude && { [header]: token }),
+      },
+      data: body,
     };
 
-    return fetchData();
+    const response = await axios(axiosConfig);
+    return response.data as FetchResponse; // that depends on the your own response object
   } catch (error: any) {
-    throw new Error(error);
+    console.log("====================================");
+    console.error(
+      `\n====> Error Fetch at : \n ` + "\nurl :",
+      BASE_URL + (TokenInclude ? "/private" : "/public") + endPoint + "\n\n", // you might want to remove modify there as well
+      error.message,
+      "\n"
+    );
+    console.log("====================================");
+
+    return { // that depends on your object response
+      status: false,
+      message: "Internal server error",
+      data: null,
+    };
   }
 };

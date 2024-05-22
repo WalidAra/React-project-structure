@@ -79,11 +79,13 @@ you need to install axios package if you prefer using axios to fetch data , you 
 npm install axios
 ```
 
-secondly you need to add your own ```TOKEN_HEADER``` in your .env file , if you are using NextJS you have to name your env variable to ```NEXT_PUBLIC_TOKEN_HEADER```
+secondly you need to add your own ```TOKEN_HEADER``` and ```BASE_URL``` in your .env file , if you are using NextJS you have to name your env variable to ```NEXT_PUBLIC_TOKEN_HEADER``` & ```NEXT_PUBLIC_BASE_URL```
 
 ```javascript
 // if you are using Next JS replace with NEXT_PUBLIC_TOKEN_HEADER
-const header = process.env.TOKEN_HEADER; ```
+const header = process.env.TOKEN_HEADER; 
+const BASE_URL = process.env.BASE_URL ; 
+
 ```
 ## last part (optional) : 
 at Fetch type Props  replace endPoint prop with all possible endpoints for better interaction with code
@@ -98,3 +100,14 @@ type Fetch = {
 };
 ```
 
+and the object response 
+
+```javascript 
+type FetchResponse = {
+  status: boolean;
+  message: string;
+  data: any;
+  token?: string;
+};
+
+```
