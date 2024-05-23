@@ -2,14 +2,8 @@
 // or modify it to normal fetch
 
 import axios, { AxiosRequestConfig } from "axios";
+import { Fetch } from "../types";
 
-type Fetch = {
-  endPoint?: string;
-  method: "GET" | "POST" | "PUT" | "DELETE";
-  body?: any;
-  TokenInclude?: boolean;
-  token?: string;
-};
 
 export const useFetch = async ({
   endPoint = "/",
