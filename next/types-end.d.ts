@@ -1,4 +1,4 @@
-export type Fetch = {
+type Fetch = {
   domain: "general" | "mobile";
   accessToken?: string;
   feature: "auth" | "client" | "accounts" | "favorite" | "collection";
@@ -8,12 +8,12 @@ export type Fetch = {
   includeToken?: boolean;
 };
 
-export type FetchResponse<T> = {
+type FetchResponse<T> = {
   status: boolean;
   message: string;
   data: T;
 };
 
-export type accessToken = {
+type accessToken = {
   accessToken: string;
 };
